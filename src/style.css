@@ -1,0 +1,13 @@
+@import 'css/theme.css';
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .2rem 2rem;
+  border-bottom: 1px solid var(--color-tone-5);
+}
+
+.game-tile{
+
+}
