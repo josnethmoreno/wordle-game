@@ -2,21 +2,21 @@
 @import url('https://cdn.jsdelivr.net/npm/modern-css-reset@1.4.0/dist/reset.min.css');
 
 :root{
-	--green: #6aaa64;
-	--yellow: #c9b458;
-	--black: #212121;
-	--color-tone-1: #ffffff;
-	--color-tone-2: #818384;
-	--color-tone-3: #565758;
-	--color-tone-4: #3a3a3c;
-	--color-tone-5: #272729;
-	--color-tone-6: #1a1a1b;
-	--color-tone-7: #121213;
+	--color-green: #6aaa64;
+	--color-yellow: #c9b458;
+	--color-black: #212121;
+	--color-white-1: #ffffff;
+	--color-white-2: #818384;
+	--color-white-3: #565758;
+	--color-white-4: #3a3a3c;
+	--color-white-5: #272729;
+	--color-white-6: #1a1a1b;
+	--color-white-7: #121213;
 	--font-body: 'Open Sans', sans-serif;
-	--game-container: 500px;
+	--container: 500px;
 
-	--color-background: var(--color-tone-7);
-	--color-text: var(--color-tone-1);
+	--color-background: var(--color-white-7);
+	--color-text: var(--color-white-1);
 }
 
 html {font-size: 100%;}

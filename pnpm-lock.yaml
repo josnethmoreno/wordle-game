@@ -1,7 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  remixicon: ^2.5.0
   vite: ^2.9.9
+
+dependencies:
+  remixicon: 2.5.0
 
 devDependencies:
   vite: 2.9.12
@@ -263,6 +267,10 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
+
+  /remixicon/2.5.0:
+    resolution: {integrity: sha512-q54ra2QutYDZpuSnFjmeagmEiN9IMo56/zz5dDNitzKD23oFRw77cWo4TsrAdmdkPiEn8mxlrTqxnkujDbEGww==}
+    dev: false
 
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
