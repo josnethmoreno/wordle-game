@@ -41,6 +41,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.4rem;
+  transition: .2s;
 }
 
 .game-tile::before{
@@ -51,6 +52,27 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.game-tile[data-letter]{
+  border-color: var(--color-white-1);
+  animation: jackInTheBox .2s; 
+}
+
+.game-tile[data-status]{
+  animation: flipInX .5s var(--delay);
+}
+
+.game-tile[data-status='true'] {
+  background-color: var(--color-green);
+}
+
+.game-tile[data-status='find'] {
+  background-color: var(--color-yellow);
+}
+
+.game-tile[data-status='false'] {
+  background-color: var(--color-white-4);
 }
 
 .keyboard{

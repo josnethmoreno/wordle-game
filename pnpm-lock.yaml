@@ -1,16 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
+  animate.css: ^4.1.1
   remixicon: ^2.5.0
   vite: ^2.9.9
 
 dependencies:
+  animate.css: 4.1.1
   remixicon: 2.5.0
 
 devDependencies:
   vite: 2.9.12
 
 packages:
+
+  /animate.css/4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
+    dev: false
 
   /esbuild-android-64/0.14.47:
     resolution: {integrity: sha512-R13Bd9+tqLVFndncMHssZrPWe6/0Kpv2/dt4aA69soX4PRxlzsVpCvoJeFE8sOEoeVEiBkI0myjlkDodXlHa0g==}
