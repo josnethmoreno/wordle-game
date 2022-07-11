@@ -86,5 +86,6 @@ const resetGame = () => {
 	})
 }
 
-
-
+const modalStats = () => {
+	console.log(stats)
+}
