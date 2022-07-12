@@ -2,8 +2,9 @@
 @import url('https://cdn.jsdelivr.net/npm/modern-css-reset@1.4.0/dist/reset.min.css');
 
 :root{
-	--color-green: #6aaa64;
-	--color-yellow: #c9b458;
+	--color-green: #538d4e;
+	--color-yellow: #b59f3b;
+	--color-red: #BB4430;
 	--color-black: #212121;
 	--color-white-1: #ffffff;
 	--color-white-2: #818384;
@@ -26,16 +27,14 @@ body {
   background-color: var(--color-background);
   font-family: var(--font-body);
   font-weight: 400;
-  text-transform: uppercase;
   line-height: 1.75;
 }
-
-p {margin-bottom: 1rem;}
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-body);
   font-weight: 700;
   line-height: 1.3;
+  text-transform: uppercase;
 }
 
 h1 {

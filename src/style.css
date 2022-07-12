@@ -61,6 +61,7 @@
 
 .game-tile[data-status]{
   animation: flipInX .5s var(--delay);
+  border-color: transparent;
 }
 
 .game-tile[data-status='true'] {
@@ -75,35 +76,51 @@
   background-color: var(--color-white-4);
 }
 
-.keyboard{
-  display: flex;
-  flex-direction: column;
-  gap: .2rem;
-  padding-bottom: 1rem;
-}
-
-.keyboard-row{
+.snackbar{
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  gap: .2rem;
+  align-items: center;
+  padding: 1.5rem 5rem;
+  border-radius: 10px;
+  color: var(--color-white-7);
+  background-color: var(--color-white-1);
+  font-weight: bold;
+  transition: .3s;
+  visibility: hidden;
 }
 
-.key{
-  padding: .8rem 1.2rem;
+.snackbar[data-show="true"]{
+  opacity: 1;
+  visibility: visible;
+}
+
+.snackbar[data-show="false"]{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.snackbar[data-status="true"]::before{
   color: var(--color-white-1);
-  background-color: var(--color-white-2);
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bolder;
+  background-color: var(--color-green);
 }
 
-.key[data-action="backspace"]{
-  line-height: 0;
+.snackbar[data-status="false"]::before{
+  color: var(--color-white-1);
+  background-color: var(--color-red);
 }
 
-.key:hover{
-  background-color: var(--color-white-3);
+.snackbar::before{
+  content: attr(data-msg);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

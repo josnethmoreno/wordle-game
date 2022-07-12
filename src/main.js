@@ -6,8 +6,10 @@ import 'animate.css';
 import { words, word } from '/src/words.js'
 
 const tiles = document.querySelectorAll('.game-tile')
-let positionTile = 0
 const rows = document.querySelectorAll('.game-row')
+const snackbar = document.querySelector('.snackbar');
+const keys = document.querySelectorAll('.key');
+let positionTile = 0
 let positionRow = 0
 let userWord = ''
 const letterRegex = /[a-z]/i
@@ -24,6 +26,10 @@ document.addEventListener('keydown', (e) => {
 	if(e.key.match(letterRegex) && e.key === 'Backspace') {
 		deleteLetter()
 	}
+})
+
+keys.forEach((key) => {
+	key.addEventListener('onclick', (e) => console.log(e))
 })
 
 const typeLetter = (key) => {
@@ -43,8 +49,8 @@ const deleteLetter = () => {
 }
 
 const guessWord = (userWord) => {
-	if (userWord.length < 5) return console.error('No engouh letter')
-	if (!words.includes(userWord)) return console.error('No word in list')
+	if (userWord.length < 5) return showSnackbar('No engouh letter')
+	if (!words.includes(userWord)) return showSnackbar('No word in list')
 
 	const arrayWord = word.split('');
 	arrayWord.forEach((letter, index) => {
@@ -62,6 +68,8 @@ const guessWord = (userWord) => {
 		return winGame()
 	}
 
+	if (positionRow === 5) return lostGame()
+
 	updateRow()
 }
 
@@ -72,7 +80,26 @@ const updateRow = () => {
 }
 
 const winGame = () => {
-	modalStats();
+	setTimeout(() => {
+		resetGame()
+		showSnackbar('You have win', true)
+	}, 1500)
+}
+
+const lostGame = () => {
+	setTimeout(() => {
+		showSnackbar('You have lost', false)
+		resetGame()
+	}, 1500)
+}
+
+const showSnackbar = (msg, status="default") => {
+	snackbar.setAttribute('data-msg', msg)
+	snackbar.setAttribute('data-status', status)
+	snackbar.setAttribute('data-show', 'true')
+	setTimeout(() => {
+    snackbar.setAttribute('data-show', 'false')
+  }, 4000);
 }
 
 const resetGame = () => {
@@ -84,8 +111,4 @@ const resetGame = () => {
 		tile.removeAttribute('data-letter')
 		tile.removeAttribute('data-status')
 	})
-}
-
-const modalStats = () => {
-	console.log(stats)
 }
